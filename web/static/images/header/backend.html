@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html><head lang="zh-CN">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="backend_files/bootstrap.css">
+    <link rel="stylesheet" href="backend_files/backend.css">
+</head>
+<body>
+<div class="warp">
+    <div class="warp_left ">
+        <div class="logo">
+            <img src="backend_files/index.png" alt="">
+        </div>
+        <div class="nav_list">
+            <div class="nav_list_div">销售记录管理<div class="nav_list_div_ico"></div></div>
+            <div class="nav_list_div_a nav_list_div_1" style="display: block;">
+                <ul>
+                    <li class=""><a href="#" style="text-decoration: none">查询销售记录</a></li>
+                    <li class=""><a href="#" style="text-decoration: none">删除销售记录</a></li>
+                </ul>
+            </div>
+            <div class="nav_list_div">采购管理<div class="nav_list_div_ico"></div></div>
+            <div class="nav_list_div_a nav_list_div_1">
+                <ul>
+                    <li><a href="#" style="text-decoration: none">采购入库</a></li>
+                    <li><a href="#" style="text-decoration: none">采购退货</a></li>
+                </ul>
+            </div>
+            <div class="nav_list_div">商品管理
+                <div class="nav_list_div_ico"></div>
+            </div>
+            <div class="nav_list_div_a nav_list_div_2">
+                <ul>
+                    <li><a href="#" style="text-decoration: none">查询商品</a></li>
+                    <li><a href="#" style="text-decoration: none">删除商品</a></li>
+                    <li><a href="#" style="text-decoration: none">修改商品</a></li>
+                    <li><a href="#" style="text-decoration: none">添加商品</a></li>
+                </ul>
+            </div>
+            <div class="nav_list_div">员工管理<div class="nav_list_div_ico"></div></div>
+            <div class="nav_list_div_a nav_list_div_2">
+                <ul>
+                    <li><a href="#" style="text-decoration: none">查询员工</a></li>
+                    <li><a href="#" style="text-decoration: none">增加员工</a></li>
+                    <li><a href="#" style="text-decoration: none">修改员工</a></li>
+                    <li><a href="#" style="text-decoration: none">删除员工</a></li>
+                </ul>
+            </div>
+            <div class="nav_list_div">会员管理<div class="nav_list_div_ico"></div></div>
+            <div class="nav_list_div_a nav_list_div_2">
+                <ul>
+                    <li><a href="#" style="text-decoration: none">查询会员</a></li>
+                    <li><a href="#" style="text-decoration: none">增加会员</a></li>
+                    <li><a href="#" style="text-decoration: none">修改会员</a></li>
+                    <li><a href="#" style="text-decoration: none">删除会员</a></li>
+                </ul>
+            </div>
+            <div class="nav_list_div">前台管理
+                <div class="nav_list_div_ico"></div>
+            </div>
+            <div class="nav_list_div_a nav_list_div_1">
+                <ul>
+                    <li><a href="#" style="text-decoration: none">销售退货</a></li>
+                    <li><a href="#" style="text-decoration: none">销售出库</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="warp_right">
+        <div class="warp_right_a clearfix navbar-fixed-top">
+            <div class="header">
+                <h2>超市后台管理系统</h2>
+                <div class="head-right">
+                    <i class="ico-user"></i>
+                    当前用户：
+                    <div class="userslideDown">
+                        <a href="#">Admin<i class="ico-tri"></i></a>
+                        <div class="slidedownBox">
+                            <ul>
+                                <li><a href="http://localhost:63342/WebContent/Backend/login.html">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="ctab-title">
+                <h3>商品管理</h3>
+                <a href="#" class="sp-column"><i class="ico-mng"></i>栏目管理</a>
+            </div>
+                    <div class="Mian-cont-wrap" style="background-color: #f2dede">
+                        <form action="">
+                            <div class="tabwrap">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class="title"><label for="gId">商品编码：</label></td>
+                                        <td><input class="form-control txt" id="gId" name="username" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gName">商品名：</label></td>
+                                        <td><input class="form-control txt" id="gName" name="username" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gCostPrice">成本价：</label></td>
+                                        <td><input class="form-control txt" id="gCostPrice" name="gCostPrice" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gStock">库存数量：</label></td>
+                                        <td><input class="form-control txt" id="gStock" name="gStock" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gPrice">售价：</label></td>
+                                        <td><input class="form-control txt" id="gPrice" name="gPrice" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gDiscount">折扣率：</label></td>
+                                        <td><input class="form-control txt" id="gDiscount" name="gDiscount" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="title"><label for="gCategory">类别：</label></td>
+                                        <td><input class="form-control txt" id="gCategory" name="gCategory" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="title"><label for="gPoints">单个积分：</label></td>
+                                    <td><input class="form-control txt" id="gPoints" name="gPoints" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="title"><label for="gUnit">单位：</label></td>
+                                    <td><input class="form-control txt" id="gUnit" name="gUnit" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                    <td class="title"><label for="gRemark">备注：</label></td>
+                                    <td><input class="form-control txt" id="gRemark" name="gRemark" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="loginbtn" value="提交" type="submit">
+                                            <input class="resetbtn" value="重置" type="reset">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="foot">
+                <span>超市管理系统版权所有©</span>
+        </div>
+    
+
+
+<script type="text/javascript" src="backend_files/jquery-1.js"></script>
+<script type="text/javascript" src="backend_files/bootstrap.js"></script>
+<script type="text/javascript" src="backend_files/backend.js"></script>
+</body></html>

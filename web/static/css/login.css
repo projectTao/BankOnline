@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote, dl, dt, dd, ul, ol, li,
+pre, form, fieldset, legend, button,
+input, textarea, th, td, img{
+    margin: 0px;
+    padding: 0px;
+    border: medium none;
+
+}
+a{
+    text-decoration: none;
+}
+body, button, input, select, textarea{
+    font: 14px 'Microsoft Yahei', tahoma, Srial, helvetica, sans-serif;
+}
+body{
+    background: #efefef;
+}
+.superlogin{
+    background: url("../images/header/bg_login.jpg") center 0 no-repeat #f23e47;
+    min-width: 1000px;
+    height: 450px;
+}
+.loginBox{
+    margin-top: -307px;
+}
+.loginBox .login{
+    width: 230px;
+    margin: 0px auto;
+}
+.loginMain{
+    background: #ffffff;
+    width: 484px;
+    height: 280px;
+    margin: 109px auto;
+}
+.loginMain .tabwrap{
+    padding: 20px 40px;
+}
+.loginMain .tabwrap tr td{
+    vertical-align: middle;
+}
+.loginMain .tabwrap td.title{
+    font-size: 16px;
+    color: #454545;
+    line-height: 50px;
+}
+.loginMain .tabwrap tr td .txt{
+    width: 242px;
+    height: 25px;
+    padding: 5px;
+    border:  1px solid #cdcdcd;
+    margin: 13px 0px;
+}
+.loginMain .tabwrap tr td .txt2{
+    float: left;
+    width: 112px;
+}
+.loginMain .tabwrap tr td span.yzm{
+    float: left;
+    display: inline-block;
+    width: 106px;
+    height: 35px;
+    overflow: hidden;
+    margin: 13px 0px 0px 19px;
+}
+.loginMain .tabwrap tr td input.loginbtn{
+    background: #00B38B;
+}
+.loginMain .tabwrap tr td input[type="button"]{
+    width: 102px;
+    height: 42px;
+    color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 70px;
+}
+.loginMain .tabwrap tr td input[type="submit"]{
+    width: 102px;
+    height: 42px;
+    color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.loginMain .tabwrap tr td .resetbtn{
+    margin-left: 46px;
+    width: 101px;
+    text-align: center;
+    height: 42px;
+    color: #ffffff;
+    cursor: pointer;
+    background: #00B38B;
+    display: inline-block;
+    vertical-align:middle;
+    border-radius: 2px;
+    padding-bottom: 2px;
+}
+.loginMain .tabwrap tr td.forgetpsw{
+    padding-top: 20px;
+    text-align: right;
+    display: inline-block;
+}
+.loginMain .tabwrap tr td.forgetpsw a {
+    color: #666;
+}
+.loginMain .tabwrap tr td .forgetpsw_2{
+    margin-left: 10px;
+}
+.footer{
+    text-align: center;
+    color: #8f8f8f;
+    padding: 37px 0 10px;
+}

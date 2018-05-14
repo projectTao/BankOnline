@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    padding-left: 50px;
+    position: relative;
+}
+.content_left{
+    float: left;
+    width: 130px;
+
+}
+.content_right{
+    float: right;
+    width: 785px;
+    height: 236px;
+    position: absolute;
+    left: 180px;
+    border: 3px solid blue;
+}
+.content_right_a{
+    padding: 50px 205px;
+}
+.content_right_b,.content_right_c{
+    padding: 30px 130px;
+}
+.content_right_b
+h4{
+    padding-bottom: 20px;
+}
+tr td{
+    text-align: center;
+}
+tr td a{
+    font-size: 15px;
+    padding: 15px 15px;
+}
+#tableSort thead tr th{
+    width: 100px;
+}
+.left{
+    display: inline-block;
+    width: 116px;
+    height: 60px;
+    font-size: 18px;
+}
+.container_content{
+    padding-left: 30px;
+}
+.content_right_div{
+    line-height: 35px;
+}
+.content_right_div h4{
+    float: left;
+}
+.right_div_a{
+    float: right;
+}
+#span_a,#span_b,#span_c,#span_d{
+    color: red;
+    font-size: 15px;
+    font-weight: normal;
+}

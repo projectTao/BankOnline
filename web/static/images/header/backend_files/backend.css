@@ -1,0 +1,412 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body,div, dl, dt, h1, h2, h3, h4, h5, h6, input, li, p, td, ul{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+   text-decoration: none;
+    color: #333;
+}
+input{
+    line-height: normal;
+    margin: 0px;
+
+}
+a:hover{
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+.warp{
+    position: relative;
+    min-width: 1000px;
+    overflow: hidden;
+}
+.warp_left{
+    width: 205px;
+    background-color: #d8d8d8;
+    height: 835px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 8;
+}
+.content{
+    margin-top: 86px;
+}
+.navbar-fixed-top{
+    z-index: 8;
+    margin-left: 205px;
+    background-color: #ffffff;
+}
+.logo{
+    height: 85px;
+    background: #00B38B;
+    border-bottom: 1px solid #00B38B;
+}
+.nav_list{
+    width: 100%;
+    height: 100%;
+}
+.nav_list_div{
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #707783;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.nav_list_div_ico{
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/header/5.png") no-repeat;
+}
+.nav_list_div_a{
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+
+}
+.nav_list_div_a ul li a{
+    color: #707783;
+}
+.nav_list_div_1{
+    height: 55px;
+}
+.nav_list_div_2{
+    height: 120px;
+}
+.nav_list_div_a{
+    display: none;
+}
+
+.acitv{
+    display: inline-block;
+}
+.acitv_2{
+    background-color: #dff0d8;
+    color: #428bca;
+}
+.warp_right{
+    margin-left: 205px;
+    background-color: #f6f5fa;
+}
+.header{
+    height: 86px;
+    border-bottom: 1px solid #e5e4ee;
+}
+.header h2{
+    display: block;
+    float: left;
+    font-weight: normal;
+    font-size: 28px;
+    color: #454545;
+    margin-left: 2%;
+    line-height: 86px;
+}
+.header .head-right{
+    float: right;
+    margin: 33px 19px 0 0;
+}
+ .head-right i.ico-user{
+     display:inline-block;
+     width: 14px;
+     height: 15px;
+     background: url("../images/header/ico_fabu_other.png") no-repeat 0 -24px;
+     font-size: 16px;
+     margin-right: 9px;
+     position: relative;
+     top: 3px;
+}
+ .userslideDown{
+     display: inline-block;
+     position: relative;
+     height: 50px;
+ }
+.userslideDown a{
+    color: #454545;
+}
+.userslideDown a i.ico-tri{
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url("../images/header/ico_fabu_other.png") no-repeat -2px 0;
+    margin-left: 8px;
+    position: relative;
+    top: -3px;
+    transition:  transform .4s ease-out;
+}
+.userslideDown a.tri i.ico-tri{
+    transform:rotate(180deg);
+}
+.slidedownBox{
+    position: absolute;
+    top: 36px;
+    right: -12px;
+    width: 84px;
+    z-index: 999;
+    padding: 0px 12px;
+    opacity: 0;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.slidedownBox.show{
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.slidedownBox ul{
+    transform: translateY(-20px);
+    transition-duration: 0.3s;
+}
+.slidedownBox ul li{
+    font-size: 14px;
+    border-bottom: 1px solid #e4e4e4;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 12px;
+}
+.slidedownBox ul li a{
+    color: #454545;
+}
+.ctab-title{
+    height: 73px;
+}
+.ctab-title h3{
+    float: left;
+    display: block;
+    line-height: 73px;
+    font-weight: normal;
+    font-size: 22px;
+    color: #454545;
+    margin-left: 2%;
+}
+.ctab-title a{
+    display: block;
+    float: right;
+    width: 108px;
+    height: 32px;
+    background-color: #f9f9f9;
+    border: 1px solid #d8d8d8;
+    color: #454545;
+    line-height: 32px;
+    margin: 19px 18px 0 0;
+}
+.ctab-title a i.ico-mng{
+    display: block;
+    float: left;
+    width: 18px;
+    height: 16px;
+    margin: 8px 7px 0 12px;
+    background: url("../images/header/ico_fabu_other.png") no-repeat 0 -58px;
+}
+.Mian-cont-wrap{
+    background-color: #f6f5fa;
+    padding-bottom: 14px;
+}
+
+.Mian-cont-wrap{
+    margin: 0px 2%;
+    background: #ffffff;
+    border: 1px solid #dbd9e1;
+}
+.tabwrap{
+    margin-left: 600px;
+}
+.tabwrap tr{
+    height: 60px;
+}
+table{
+    width: 366px;
+}
+.tabwrap tr td:nth-of-type(2){
+    width: 266px;
+}
+.tabwrap tr td:nth-of-type(2) input{
+    background-color: #F0F3FA;
+}
+.tabwrap tr td:first-child label{
+    font-size: 20px;
+    color: #7D7D7D;
+    font-weight: normal;
+}
+.tabwrap tr:last-child{
+    text-align: center;
+}
+.tabwrap tr td input.loginbtn{
+    background: #00B38B;
+}
+.tabwrap tr td input[type="reset"]{
+    width: 100px;
+    height: 42px;
+    color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+
+}
+.tabwrap tr td input[type="submit"]{
+    width: 100px;
+    height: 42px;
+    color: #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+}
+.tabwrap tr td input.resetbtn{
+    background: #999999;
+}
+.tabwrap tr:last-child{
+    position: relative;
+}
+.tabwrap tr:last-child input:first-child{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+.tabwrap tr:last-child input:last-child{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+
+.defaultTable{
+    width: 98%;
+    margin: 0px auto;
+}
+.defaultTable th{
+    height: 48px;
+    background: #fdfdfd;
+    font-weight: normal;
+    font-size: 16px;
+    color: #363636;
+}
+.defaultTable .t_1{
+    width: 10%;
+    text-align: left;
+    padding-left: 1%;
+    position: relative;
+}
+.defaultTable .t_2{
+    width: 55%;
+    text-align: left;
+}
+.defaultTable .t_3{
+    width: 15%;
+    text-align: center;
+}
+.defaultTable .t_4{
+    width: 30%;
+    text-align: center;
+}
+.defaultTab-T{
+    background: #fdfdfd;
+    border-bottom: 1px solid #f1eff6;
+}
+.defaultTable2{
+    width: 98%;
+    margin: 5px auto;
+}
+.defaultTable td{
+    padding: 15px 0;
+    color: #545454;
+    border-bottom: 1px solid #f6f5fa;
+}
+.defaultTable .btn a{
+    display: inline-block;
+    padding: 0px 9px;
+    height: 21px;
+    line-height: 21px;
+    border-radius: 2px;
+    margin: 0 2%;
+}
+.defaultTable .btn a.modify{
+    color: #fe990b;
+    border: 1px solid #fe990b;
+}
+.defaultTable .btn a.delete{
+    color: #f23e47;
+    border: 1px solid #f23e47;
+}
+.pageSelect{
+    position: relative;
+    height: 74px;
+    margin: 0 2%;
+}
+.pageSelect span{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    line-height: 74px;
+    color: #8a8a8a;
+}
+.pageSelect span b{
+    font-weight: normal;
+    color: #f23e47;
+}
+.pageSelect .pageWrap{
+    text-align: center;
+    padding-top: 21px;
+}
+.pageSelect .pageWrap a{
+    display: inline-block;
+    width: 41px;
+    height: 33px;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    color: #919191;
+    line-height: 33px;
+    margin: 0px 3px;
+    background: #fff;
+}
+.pageSelect .pageWrap a i.ico-pre{
+    display: block;
+    width: 8px;
+    height: 33px;
+    background: url("../images/header/ico_fabu_page.png") no-repeat 0 10px;
+    margin: 0px auto;
+}
+.pageSelect .pageWrap a i.ico-next{
+    display: block;
+    width: 8px;
+    height: 33px;
+    background: url("../images/header/ico_fabu_page.png") no-repeat 0 -29px;
+    margin: 0px auto;
+}
+.pageSelect .pageWrap a.cur, .pageSelect .pageWrap a:hover{
+    background: #81848b;
+    color: #ffffff;
+    border-radius: 1px;
+}
+.clearfix::after {
+    clear: both;
+    content: "\200B";
+    display: block;
+    height: 0;
+}
+.foot{
+    width: 100%;
+    height: 112px;
+    line-height: 112px;
+    display: inline-block;
+    background-color: #1b6d85;
+    text-align: center;
+}
+.foot span{
+    color: #d5d5d5;
+}

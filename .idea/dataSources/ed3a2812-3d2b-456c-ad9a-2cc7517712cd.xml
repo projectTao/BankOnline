@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bankonline@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bankonline">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="easybuy"/>
+    <schema id="4" parent="1" name="edoc"/>
+    <schema id="5" parent="1" name="enginedb"/>
+    <schema id="6" parent="1" name="epet"/>
+    <schema id="7" parent="1" name="futianlibrary"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="items"/>
+    <schema id="10" parent="1" name="jdbc01"/>
+    <schema id="11" parent="1" name="library"/>
+    <schema id="12" parent="1" name="mybatis"/>
+    <schema id="13" parent="1" name="mybatis001"/>
+    <schema id="14" parent="1" name="mybatis002"/>
+    <schema id="15" parent="1" name="myschool"/>
+    <schema id="16" parent="1" name="mysql"/>
+    <schema id="17" parent="1" name="mysqlweb"/>
+    <schema id="18" parent="1" name="mysql_01"/>
+    <schema id="19" parent="1" name="mysql_02"/>
+    <schema id="20" parent="1" name="performance_schema"/>
+    <schema id="21" parent="1" name="realestatel"/>
+    <schema id="22" parent="1" name="ssm001"/>
+    <schema id="23" parent="1" name="supershop"/>
+    <schema id="24" parent="1" name="supershop2"/>
+    <schema id="25" parent="1" name="test"/>
+    <schema id="26" parent="1" name="testmysql"/>
+    <schema id="27" parent="1" name="upload"/>
+    <table id="28" parent="2" name="account"/>
+    <table id="29" parent="2" name="transactionrecord"/>
+    <column id="30" parent="28" name="id">
+      <Position>1</Position>
+      <Comment>使用自增赋值</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="28" name="cardNo">
+      <Position>2</Position>
+      <Comment>16 位数字构成的卡号</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="28" name="password">
+      <Position>3</Position>
+      <Comment>6 位数字的密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="28" name="balance">
+      <Position>4</Position>
+      <Comment>2 位小数</Comment>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="28" name="status">
+      <Position>5</Position>
+      <Comment>1 为正常，0 为冻结</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <index id="35" parent="28" name="cardNo">
+      <ColNames>cardNo</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="36" parent="28" name="id">
+      <ColNames>id</ColNames>
+    </index>
+    <key id="37" parent="28" name="cardNo">
+      <ColNames>cardNo</ColNames>
+      <UnderlyingIndexName>cardNo</UnderlyingIndexName>
+    </key>
+    <column id="38" parent="29" name="id">
+      <Position>1</Position>
+      <Comment>使用自增赋值</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="29" name="cardNo">
+      <Position>2</Position>
+      <Comment>对应account 表cardNo</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="29" name="transactionDate">
+      <Position>3</Position>
+      <Comment>取系统时间</Comment>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="29" name="transactionAmount">
+      <Position>4</Position>
+      <Comment>2 位小数</Comment>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="29" name="balance">
+      <Position>5</Position>
+      <Comment>2 位小数</Comment>
+      <DataType>double(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="29" name="transactionType">
+      <Position>6</Position>
+      <Comment>存款、取款</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="29" name="remark">
+      <Position>7</Position>
+      <Comment>交易的备注</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="45" parent="29" name="cardNo">
+      <ColNames>cardNo</ColNames>
+    </index>
+    <key id="46" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="29" name="transactionrecord_ibfk_1">
+      <ColNames>cardNo</ColNames>
+      <RefSchemaName>bankonline</RefSchemaName>
+      <RefTableName>account</RefTableName>
+      <RefColNames>cardNo</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

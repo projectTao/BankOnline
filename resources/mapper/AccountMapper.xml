@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ltt.mapper.AccountMapper" >
+  <resultMap id="BaseResultMap" type="com.ltt.model.Account" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="cardNo" property="cardNo" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="balance" property="balance" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ltt.model.Account" >
+    insert into account (id, cardNo, password, 
+      balance, status)
+    values (#{id,jdbcType=BIGINT}, #{cardno,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{balance,jdbcType=DOUBLE}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ltt.model.Account" >
+    insert into account
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="cardNo != null" >
+        cardNo,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="balance != null" >
+        balance,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cardNo != null" >
+        #{cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="balance != null" >
+        #{balance,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="login" resultMap="BaseResultMap">
+    SELECT *
+    FROM account
+    <where>
+      <if test="cardNo != null">
+        AND cardNo = #{cardNo}
+      </if>
+      <if test="password != null">
+        AND password = #{password}
+      </if>
+    </where>
+    AND status = 1
+  </select>
+  <select id="selPassword" resultMap="BaseResultMap">
+    SELECT *
+    FROM account
+    <where>
+      <if test="cardNo != null">
+        AND cardNo = #{cardNo}
+      </if>
+    </where>
+    AND status = 1
+  </select>
+  <select id="isExists" resultType="int">
+    SELECT COUNT(*)
+    FROM account
+    <where>
+      <if test="cardNo != null">
+        AND cardNo = #{cardNo}
+      </if>
+    </where>
+  </select>
+  
+  <select id="isDisable" resultType="int">
+    SELECT COUNT(*)
+    FROM account
+    <where>
+      <if test="cardNo != null">
+        AND cardNo = #{cardNo}
+      </if>
+      AND  status = 0
+    </where>
+  </select>
+
+    <select id="selBalance" resultMap="BaseResultMap">
+      SELECT *
+      FROM account
+      <where>
+        <if test="cardNo != null">
+          AND cardNo = #{cardNo}
+        </if>
+      </where>
+    </select>
+  <update id="updateBalanceRecord">
+    update account SET balance=#{balance} WHERE cardNo=#{cardNo}
+  </update>
+  <update id="updatePassword">
+    update account SET password=#{password} WHERE cardNo=#{cardNo}
+  </update>
+</mapper>
